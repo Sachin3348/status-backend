@@ -28,6 +28,7 @@ async function processRequest(req, res){
                 return res.send({status: true})
     } catch (error) {
         console.log(error.message)
+      return res.status(500).send({status:false})
     }
 }
 router.post("/get-status-video", processRequest)
